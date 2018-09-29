@@ -79,23 +79,19 @@ extension SelectCityViewController: UITextFieldDelegate {
 //MARK: UITableView Functions
 extension SelectCityViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return self.filteredCities.count
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.filteredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = citiesTableView.dequeueReusableCell(withIdentifier: "CityCell") else { return UITableViewCell() }
-        let city = self.filteredCities[indexPath.section]
+        let city = self.filteredCities[indexPath.row]
         cell.textLabel?.text = city.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let city = self.filteredCities[indexPath.section]
+        let city = self.filteredCities[indexPath.row]
         self.selectedCity = city
         self.performSegue(withIdentifier: "SelectCity", sender: nil)
     }

@@ -21,4 +21,20 @@ struct DateUtil {
         let calendar = Calendar.current
         return calendar.compare(date1, to: date2, toGranularity: .day) == .orderedSame && calendar.compare(date1, to: date2, toGranularity: .month) == .orderedSame && calendar.compare(date1, to: date2, toGranularity: .year) == .orderedSame
     }
+    
+    static func getDay(date: Date?) -> Int {
+        guard let date = date else { return 0 }
+        let calendar = Calendar.current
+        return calendar.component(.day, from: date)
+    }
+    static func getMonth(date: Date?) -> Int {
+        guard let date = date else { return 0 }
+        let calendar = Calendar.current
+        return calendar.component(.month, from: date)
+    }
+    static func getYear(date: Date?) -> Int {
+        guard let date = date else { return 0 }
+        let calendar = Calendar.current
+        return calendar.component(.year, from: date)
+    }
 }

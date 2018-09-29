@@ -20,7 +20,7 @@ class ShowForecastViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.forecastTableView.register(UITableViewCell.self, forCellReuseIdentifier: "ForecastCell")
+        self.forecastTableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: "ForecastCell")
         
         self.getForecast()
     }
@@ -65,9 +65,9 @@ extension ShowForecastViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = forecastTableView.dequeueReusableCell(withIdentifier: "ForecastCell") else { return UITableViewCell() }
-        let weather = self.groupedForecast[indexPath.section]
-        cell.textLabel?.text = weather.description
+        guard let cell = forecastTableView.dequeueReusableCell(withIdentifier: "ForecastCell") as? WeatherTableViewCell else { return UITableViewCell() }
+        let weather = self.groupedForecast[indexPath.row]
+        cell.configure(weather: weather)
         return cell
     }
 }

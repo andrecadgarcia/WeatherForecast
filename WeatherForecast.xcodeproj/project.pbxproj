@@ -21,6 +21,7 @@
 		1A232FFF215FB94C00295C57 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A232FFE215FB94C00295C57 /* Weather.swift */; };
 		1A233002215FC1B400295C57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A233001215FC1B400295C57 /* Constants.swift */; };
 		1A233004215FC21A00295C57 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A233003215FC21A00295C57 /* Util.swift */; };
+		1A233006215FC87A00295C57 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A233005215FC87A00295C57 /* WeatherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1A232FFE215FB94C00295C57 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		1A233001215FC1B400295C57 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1A233003215FC21A00295C57 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		1A233005215FC87A00295C57 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				1A232FE5215F998D00295C57 /* LaunchScreen.storyboard */,
 				1A232FE0215F998B00295C57 /* Main.storyboard */,
+				1A233005215FC87A00295C57 /* WeatherTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				1A232FFF215FB94C00295C57 /* Weather.swift in Sources */,
 				1A232FDF215F998B00295C57 /* SelectCityViewController.swift in Sources */,
+				1A233006215FC87A00295C57 /* WeatherTableViewCell.swift in Sources */,
 				1A232FDD215F998B00295C57 /* AppDelegate.swift in Sources */,
 				1A232FFB215FAEEC00295C57 /* ShowForecastViewController.swift in Sources */,
 				1A232FF9215FA01D00295C57 /* CitiesServices.swift in Sources */,
