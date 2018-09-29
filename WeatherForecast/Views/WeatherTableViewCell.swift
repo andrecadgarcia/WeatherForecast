@@ -20,6 +20,7 @@ class WeatherTableViewCell: UITableViewCell {
     
     func configure(weather: Weather) {
         if (self.forecast == nil || self.temperature == nil || self.humidity == nil || self.wind_speed == nil || self.day == nil || self.month == nil || self.year == nil ) {
+            self.textLabel?.text = "\(weather.description.capitalized) - \(weather.temperature)K - \(DateUtil.getMonth(date: weather.date))/\(DateUtil.getMonth(date: weather.date))/\(DateUtil.getYear(date: weather.date))"
             return
         }
         self.forecast.text = weather.description.capitalized
